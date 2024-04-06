@@ -1,0 +1,92 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #fceabb, #f8b500, #ffa600);
+  }
+  
+  .container {
+    text-align: center;
+    color: #fff;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  #countdown {
+    font-size: 2rem;
+    margin-top: 30px;
+    animation: countdown-animation 1s ease-in-out infinite alternate;
+  }
+  
+  #photos {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .your-photo,
+  .partner-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 20px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: photo-fade-in 2s ease forwards;
+  }
+  
+  #confetti {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .confetti {
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    border-radius: 50%;
+    animation: confetti-fall linear infinite;
+  }
+  
+  @keyframes confetti-fall {
+    0% {
+      transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+  
+  @keyframes countdown-animation {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes photo-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
