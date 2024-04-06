@@ -1,5 +1,4 @@
 /* styles.css */
-/* styles.css */
 
 body {
   margin: 0;
@@ -17,46 +16,48 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3vw; /* Responsive font size */
+  margin-bottom: 2vw; /* Responsive margin */
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2vw; /* Responsive font size */
+  margin-bottom: 2vw; /* Responsive margin */
 }
 
 #countdown {
-  font-size: 2rem;
-  margin-top: 30px;
+  font-size: 2vw; /* Responsive font size */
+  margin-top: 5vw; /* Responsive margin */
   animation: countdown-animation 1s ease-in-out infinite alternate;
 }
 
 #photos {
-  margin-top: 50px;
+  margin-top: 5vw; /* Responsive margin */
   display: flex;
   justify-content: center;
 }
 
 .your-photo,
 .partner-photo {
-  width: 200px;
-  height: 200px;
+  width: 15vw; /* Responsive width */
+  height: 15vw; /* Responsive height */
   object-fit: cover;
-  margin: 0 20px;
+  margin: 0 2vw; /* Responsive margin */
   border-radius: 50%;
-  border: 5px solid #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 0.5vw solid #fff; /* Responsive border */
+  box-shadow: 0 0 2vw rgba(0, 0, 0, 0.3); /* Responsive box shadow */
   animation: photo-fade-in 2s ease forwards;
 }
 
 #confetti {
-  margin-top: 50px;
+  margin-top: 5vw; /* Responsive margin */
   display: flex;
   justify-content: center;
 }
 
 .confetti {
-  width: 10px;
-  height: 10px;
+  width: 1vw; /* Responsive width */
+  height: 1vw; /* Responsive height */
   background-color: #f00;
   border-radius: 50%;
   animation: confetti-fall linear infinite;
@@ -83,7 +84,7 @@ h2 {
 @keyframes photo-fade-in {
   from {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(-2vw);
   }
   to {
     opacity: 1;
@@ -94,17 +95,28 @@ h2 {
 /* Media query for smaller screens */
 @media only screen and (max-width: 768px) {
   h1 {
-    font-size: 2rem;
+    font-size: 5vw; /* Responsive font size */
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 3vw; /* Responsive font size */
+  }
+
+  #countdown {
+    font-size: 3vw; /* Responsive font size */
   }
 
   .your-photo,
   .partner-photo {
-    width: 150px;
-    height: 150px;
-    margin: 0 10px;
+    width: 30vw; /* Responsive width */
+    height: 30vw; /* Responsive height */
+    margin: 0 5vw; /* Responsive margin */
+    border-width: 1vw; /* Responsive border width */
+    box-shadow: 0 0 3vw rgba(0, 0, 0, 0.3); /* Responsive box shadow */
+  }
+
+  .confetti {
+    width: 2vw; /* Responsive width */
+    height: 2vw; /* Responsive height */
   }
 }
